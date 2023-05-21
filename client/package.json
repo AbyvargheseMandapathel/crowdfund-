@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "ethjs-query": "^0.3.8",
     "moment": "^2.29.2",
     "next": "^11.1.2",
     "next-redux-wrapper": "^7.0.5",
