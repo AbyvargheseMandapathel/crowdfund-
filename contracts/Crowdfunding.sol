@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-import "hardhat/console.sol";
+// import "hardhat/console.sol";
 import './Project.sol';
 
 contract Crowdfunding{
@@ -83,6 +83,12 @@ function contribute(address _projectAddress) public payable{
    // Trigger event 
    emit ContributionReceived(_projectAddress,msg.value,msg.sender);
 }
+
+fallback() external {
+  // Handle unexpected or unrecognized function calls
+  revert("Function not found");
+}
+
 
 }
 
